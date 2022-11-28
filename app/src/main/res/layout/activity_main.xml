@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+<!--    fragment-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        />
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="620dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/white"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/opt1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight=".5"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingRight="60dp">
+
+                    <ImageView
+                        android:id="@+id/imageOperator"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_operator_gray" />
+
+                    <TextView
+                        android:id="@+id/textOperator"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="2"
+                        android:text="Contact Us"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/opt2"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight=".5"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:paddingLeft="60dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageAkun"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_account_gray" />
+
+                    <TextView
+                        android:id="@+id/textAkun"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="2"
+                        android:text="Account"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/study"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:elevation="8dp"
+            android:src="@drawable/ic_study"
+            app:backgroundTint="@color/yellow"
+            app:fabCustomSize="80dp"
+            app:layout_anchor="@id/appBar"
+            app:maxImageSize="48dp"
+            app:tint="@null">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
