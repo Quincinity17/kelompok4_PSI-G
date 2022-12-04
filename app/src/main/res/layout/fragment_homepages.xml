@@ -92,7 +92,10 @@
                 app:layout_constraintTop_toTopOf="@id/imageHomepage" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/KategoriList"
+                android:id="@+id/KategoriDaftar"
+                app:cardCornerRadius="15dp"
+                android:layout_marginStart="28dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
             <TextView
@@ -108,6 +111,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/imageHomepage" />
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/EksploreList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
