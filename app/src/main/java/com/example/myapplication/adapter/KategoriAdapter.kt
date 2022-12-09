@@ -1,12 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.adapter
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.model.Kategori
+import com.example.myapplication.R
 
 class KategoriAdapter (private val kategoriList: List<Kategori>):
     RecyclerView.Adapter<KategoriAdapter.KategoriViewHolder>() {

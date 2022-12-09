@@ -27,7 +27,7 @@
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="14dp"
                 android:text="Selamat Datang di"
-                android:textSize="16sp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="0dp"
-                android:text="Mentoree"
+                app:fontFamily="@font/splashtitle"
+                android:textColor="@color/black"
+                android:text="Mentoree Apps"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -110,10 +112,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/imageHomepage" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/EksploreList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="850dp"
+                android:layout_marginStart="28dp" />
 
 
         </LinearLayout>

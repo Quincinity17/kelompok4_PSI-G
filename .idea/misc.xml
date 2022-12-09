@@ -4,19 +4,30 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/UASPSI/app/src/main/res/drawable/bcg_search.xml" value="0.3345" />
+        <entry key="..\:/UASPSI/app/src/main/res/drawable/button_switch.xml" value="0.3635" />
+        <entry key="..\:/UASPSI/app/src/main/res/drawable/button_top.xml" value="0.3635" />
+        <entry key="..\:/UASPSI/app/src/main/res/drawable/grey_cursor_color.xml" value="0.3635" />
         <entry key="..\:/UASPSI/app/src/main/res/drawable/ic_search.xml" value="0.3345" />
+        <entry key="..\:/UASPSI/app/src/main/res/drawable/text_background.xml" value="0.3635" />
         <entry key="..\:/UASPSI/app/src/main/res/layout/activity_frgment_homepage.xml" value="0.18541666666666667" />
         <entry key="..\:/UASPSI/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/UASPSI/app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/activity_register.xml" value="0.26791277258566976" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/activity_signup.xml" value="0.2" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/UASPSI/app/src/main/res/layout/card_kategori.xml" value="0.33" />
-        <entry key="..\:/UASPSI/app/src/main/res/layout/card_mentor.xml" value="0.11363636363636363" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/card_mentor.xml" value="0.33" />
         <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_accounts.xml" value="0.1" />
         <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_homepage.xml" value="0.14130434782608695" />
-        <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_homepages.xml" value="0.16033755274261605" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_homepages.xml" value="0.23371647509578544" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_login_mentee.xml" value="0.33" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_login_mentor.xml" value="0.1762917933130699" />
         <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_notifications.xml" value="0.22644927536231885" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_register_mentee.xml" value="0.2318840579710145" />
+        <entry key="..\:/UASPSI/app/src/main/res/layout/fragment_register_mentor.xml" value="0.3277310924369748" />
         <entry key="..\:/UASPSI/app/src/main/res/layout/kategori_template.xml" value="0.3625" />
         <entry key="..\:/UASPSI/app/src/main/res/menu/bottom_menu.xml" value="0.3625" />
         <entry key="..\:/UASPSI/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3345" />
+        <entry key="..\:/UASPSI/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.162" />
       </map>
     </option>
   </component>
