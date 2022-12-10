@@ -1,11 +1,20 @@
 package com.example.myapplication.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.myapplication.R
+import com.example.myapplication.activity.MainActivity
+import com.example.myapplication.api.RetrofitClient
+import com.example.myapplication.model.CreateMentorRespons
+import kotlinx.android.synthetic.main.activity_signup.*
+import kotlinx.android.synthetic.main.fragment_register_mentor.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +45,7 @@ class RegisterMentee : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_register_mentee, container, false)
+        inputRegister.setOnClickListener{addMentor()}
     }
 
     companion object {
@@ -56,5 +66,26 @@ class RegisterMentee : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+    private fun addMentor(){
+        RetrofitClient.instance.createPost(
+            nameInpt.text.toString(),
+            emailInpt.text.toString(),
+            passInpt.text.toString(),
+            descInpt.text.toString()
+        ).enqueue(object : Callback<CreateMentorRespons> {
+            override fun onResponse(
+                call: Call<CreateMentorRespons>,
+                response: Response<CreateMentorRespons>
+            ) {
+                startActivity(Intent(context, MainActivity::class.java))
+            }
+
+            override fun onFailure(call: Call<CreateMentorRespons>, t: Throwable) {
+//                Toast.makeText(context, t.message, Toast.LENGTH_LONG).show()
+            }
+
+        })
+
     }
 }

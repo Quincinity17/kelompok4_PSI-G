@@ -22,6 +22,7 @@
             android:layout_marginStart="20dp"
             />
         <EditText
+            android:id="@+id/nameInptMentee"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -43,6 +44,7 @@
             android:layout_marginStart="20dp"
             />
         <EditText
+            android:id="@+id/emailInptMentee"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -64,6 +66,7 @@
             android:layout_marginStart="20dp"
             />
         <EditText
+            android:id="@+id/passInptMentee"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -86,6 +89,7 @@
             android:layout_marginStart="20dp"
             />
         <EditText
+            android:id="@+id/statusInptMentee"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"

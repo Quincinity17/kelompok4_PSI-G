@@ -11,10 +11,14 @@ import com.example.myapplication.R
 import com.example.myapplication.activity.MainActivity
 import com.example.myapplication.adapter.MentorAdapter
 import com.example.myapplication.api.RetrofitClient
+import com.example.myapplication.model.CreateMenteeRespons
 import com.example.myapplication.model.CreateMentorRespons
+import com.example.myapplication.model.MentorRequestLogin
 import com.example.myapplication.model.MentorRespons
 import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.fragment_homepages.*
+import kotlinx.android.synthetic.main.fragment_login_mentor.*
+import kotlinx.android.synthetic.main.fragment_register_mentee.*
 import kotlinx.android.synthetic.main.fragment_register_mentor.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -49,25 +53,24 @@ class RegisterMentor : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_register_mentor, container, false)
-        inputRegister.setOnClickListener{addMentor()}
+        inputRegister.setOnClickListener{addMentee()}
     }
 
 
-    private fun addMentor(){
-        RetrofitClient.instance.createPost(
-            nameInpt.text.toString(),
-            emailInpt.text.toString(),
-            passInpt.text.toString(),
-            descInpt.text.toString()
-        ).enqueue(object : Callback<CreateMentorRespons>{
-            override fun onResponse(
-                call: Call<CreateMentorRespons>,
-                response: Response<CreateMentorRespons>
-            ) {
+    private fun addMentee(){
+        val req = MentorRequestLogin()
+        req.email = mentorEmail.text.toString().trim()
+        req.password = mentorPass.text.toString().trim()
+
+        EksploreList.setHasFixedSize(true)
+        EksploreList.layoutManager = LinearLayoutManager(context)
+        RetrofitClient.instance.getPosts().enqueue(object : Callback<MentorRespons>{
+            override fun onResponse(call: Call<MentorRespons>, response: Response<MentorRespons>) {
+                val user = response.body()
                 startActivity(Intent(context, MainActivity::class.java))
             }
 
-            override fun onFailure(call: Call<CreateMentorRespons>, t: Throwable) {
+            override fun onFailure(call: Call<MentorRespons>, t: Throwable) {
 //                Toast.makeText(context, t.message, Toast.LENGTH_LONG).show()
             }
 
